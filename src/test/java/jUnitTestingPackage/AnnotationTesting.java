@@ -1,15 +1,14 @@
 package jUnitTestingPackage;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 
 public class AnnotationTesting {
 	
 	
 	
-	@Before
+	@BeforeMethod
 	public void before() {
 		System.out.println("BrowserOpening and Maximizing");
 	}
@@ -27,8 +26,7 @@ public class AnnotationTesting {
 
 	}
 	
-	@Ignore
-	@After
+	@AfterMethod
 	public void after() {
 		System.out.println("Browser Closing/Quiting");
 
