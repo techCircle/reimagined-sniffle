@@ -1,8 +1,7 @@
 package restAssuredTests;
 
-import org.junit.Assert;
-import org.junit.Test;
-
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -29,7 +28,7 @@ public class createBoards {
 		
 		int statusCode = myResponse.getStatusCode();
 		
-		Assert.assertEquals(200, statusCode);
+		AssertJUnit.assertEquals(200, statusCode);
 		
 		System.out.println("The test passed and board created with status Code- "+ statusCode);
 		

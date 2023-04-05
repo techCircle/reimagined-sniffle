@@ -1,14 +1,13 @@
 package basicSeleniumTests;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import Utilities.BaseClass;
 
 public class openBrowserUsingDriverClass {
 
-	@Before
+	@BeforeMethod
 	public void beforeMethod() {
 		BaseClass.getDriver();
 
@@ -27,7 +26,7 @@ public class openBrowserUsingDriverClass {
 	
 	
 
-	@After
+	@AfterMethod
 	public void afterMethod() {
 
 		BaseClass.closeDriver();

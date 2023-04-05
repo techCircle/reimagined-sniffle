@@ -1,8 +1,7 @@
 package restAssuredTests;
 
-import org.junit.Assert;
-import org.junit.Test;
-
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
@@ -35,7 +34,7 @@ public class restAssuredGet {
 		//validate status code
 		System.out.println("Status code is : ===== " + myResponse.getStatusCode());
 		
-		Assert.assertEquals(200, myResponse.getStatusCode());
+		AssertJUnit.assertEquals(200, myResponse.getStatusCode());
 		
 		System.out.println("its a pass");
 	}

@@ -65,11 +65,11 @@
 				<version>3.0.0-M5</version>
 				<configuration>
 
-				<!-- 	<testFailureIgnore>true</testFailureIgnore> -->
+			<!-- 	<testFailureIgnore>true</testFailureIgnore> -->
 
 					<suiteXmlFiles>
 					
-					<suiteXmlFile>testng.xml</suiteXmlFile>
+					<suiteXmlFile>RegressionSuite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

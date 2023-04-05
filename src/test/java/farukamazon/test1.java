@@ -1,11 +1,11 @@
 package farukamazon;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +20,7 @@ public class test1 {
 	WebDriver driver;
 	WebDriverWait wait;
 
-	@Before
+	@BeforeMethod
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -54,12 +54,12 @@ public class test1 {
 		String expectedTitle = "Amazon.com : laptop...";
 		String actualTitle = driver.getTitle();
 		
-		Assert.assertEquals(expectedTitle, actualTitle);
+		AssertJUnit.assertEquals(expectedTitle, actualTitle);
 		
 		if(!(expectedTitle.equals(actualTitle))) {
 		//	System.out.println("---Expected: " + expectedTitle + " +++Actual: " + actualTitle);
 			
-			Assert.assertFalse("Actual: "+actualTitle,false);
+			AssertJUnit.assertFalse("Actual: "+actualTitle,false);
 			
 		}
 		
@@ -67,7 +67,7 @@ public class test1 {
 
 	}
 
-	@After
+	@AfterMethod
 	public void afterMethod() {
 		driver.quit();
 	}

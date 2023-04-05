@@ -1,11 +1,10 @@
 package basicSeleniumTests;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.asserts.SoftAssert;
@@ -16,7 +15,7 @@ public class WorkingOnAssertions {
 
 	WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 
 		WebDriverManager.chromedriver().setup();
@@ -26,33 +25,33 @@ public class WorkingOnAssertions {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
 
-	@Ignore
+	@Test(enabled = false)
 	@Test
 	public void assertTrueTest() {
 
 		String title = driver.getTitle();
 
-		Assert.assertTrue(title.equals("Google"));
+		AssertJUnit.assertTrue(title.equals("Google"));
 
 	}
 	
-	@Ignore
+	@Test(enabled = false)
 	@Test
 	public void assertFalseTest() {
 
 		String title = driver.getTitle();
 
-		Assert.assertFalse(title.equals("Youtube"));
+		AssertJUnit.assertFalse(title.equals("Youtube"));
 
 	}
 	
-	@Ignore
+	@Test(enabled = false)
 	@Test
 	public void assertEquals() {
 
 		String title = driver.getTitle();
 
-		Assert.assertEquals("Google, Inc",title );
+		AssertJUnit.assertEquals("Google, Inc",title );
 
 	}
 	
@@ -62,7 +61,7 @@ public class WorkingOnAssertions {
 		
 		SoftAssert softAssertion = new SoftAssert();
 		System.out.println("Soft assert start");
-		softAssertion.assertTrue(false);
+		AssertJUnit.assertTrue(false);
 		System.out.println("Soft assert ends");
 
 	}

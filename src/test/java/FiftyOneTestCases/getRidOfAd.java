@@ -1,9 +1,9 @@
 package FiftyOneTestCases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,8 +18,8 @@ public class getRidOfAd {
 	WebDriver driver;
     WebDriverWait wait; 
     
-     @Before
-        public void openBrowser() {
+     @BeforeMethod
+	public void openBrowser() {
 
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();

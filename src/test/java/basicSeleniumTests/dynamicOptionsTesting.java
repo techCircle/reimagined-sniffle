@@ -1,9 +1,9 @@
 package basicSeleniumTests;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public class dynamicOptionsTesting {
 
 	WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void openBrowser() {
 
 		WebDriverManager.chromedriver().setup();

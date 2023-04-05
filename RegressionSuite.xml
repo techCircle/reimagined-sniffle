@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="restAssuredTests.printingoutHeaders"/>
+      <class name="FiftyOneTestCases.getRidOfAd"/>
+      <class name="basicSeleniumTests.javaScriptExecuterTesting"/>
+      <class name="basicSeleniumTests.WorkingOnAssertions"/>
+      <class name="basicSeleniumTests.testingMultipleWindows"/>
+      <class name="restAssuredTests.postTest"/>
+      <class name="jUnitTestingPackage.AnnotationTesting"/>
+      <class name="restAssuredTests.statusValidationTest"/>
+      <class name="basicSeleniumTests.iframeTesting"/>
+      <class name="basicSeleniumTests.openBrowserUsingDriverClass"/>
+      <class name="basicSeleniumTests.alertTestingExamples"/>
+      <class name="basicSeleniumTests.dynamicOptionsTesting"/>
+      <class name="basicSeleniumTests.listOfElementsClickTask"/>
+      <class name="basicSeleniumTests.dropDownOptions"/>
+      <class name="jUnitTestingPackage.basicSeleniumMethods"/>
+      <class name="restAssuredTests.restAssuredGet"/>
+      <class name="FiftyOneTestCases.HomePageTestCases"/>
+      <class name="farukamazon.test1"/>
+      <class name="restAssuredTests.createBoards"/>
+      <class name="basicSeleniumTests.iframeTestingTask1"/>
+      <class name="basicSeleniumTests.checkboxesTesting"/>
+      <class name="basicSeleniumTests.ActionClassTasks"/>
+      <class name="basicSeleniumTests.listOfElementsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

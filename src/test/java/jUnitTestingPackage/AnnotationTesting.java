@@ -1,5 +1,6 @@
 package jUnitTestingPackage;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -14,7 +15,7 @@ public class AnnotationTesting {
 	}
 	
 	
-	@Test
+	@Test(groups="@Regression")
 	public void ValidUsernameAndValidPassword() {
 		System.out.println("Executing Testing");
 
